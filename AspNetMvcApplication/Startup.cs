@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,7 +16,10 @@ namespace AspNetMvcApplication
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews(); //mvc calýsacagýný soyledýk
+            services
+                .AddControllersWithViews()//mvc calýsacagýný soyledýk
+                .AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<Startup>()); 
+            //git sisteme bak validatasyon varsa çalýþtýr
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

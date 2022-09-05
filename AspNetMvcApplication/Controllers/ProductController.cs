@@ -29,14 +29,14 @@ namespace AspNetMvcApplication.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Product model)
+        public IActionResult Create(Product product)
         {
-            var inc = model;
+            var inc = product;
             if (!ModelState.IsValid)
             {
                 var message = ModelState.ToList();
                 
-                return View(model);
+                return View(product);
             }
             return View();
         }
