@@ -1,4 +1,4 @@
-﻿namespace OrnekUygulama1.Models.ViewModels
+﻿namespace AspNetMvcApplication.Models.ViewModels
 {
     public class UserProduct
     {

@@ -1,4 +1,4 @@
-﻿namespace OrnekUygulama1.Models
+﻿namespace AspNetMvcApplication.Models
 {
     public class User
     {
@@ -7,3 +7,5 @@
         public string LastName { get; set; }
     }
 }
+
+

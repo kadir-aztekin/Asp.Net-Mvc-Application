@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace OrnekUygulama1.Extensions
+namespace AspNetMvcApplication.Extensions
 {
     static public class Extensions
     {
