@@ -28,6 +28,7 @@ namespace AspNetMvcApplication
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles(); //wwwroot kullanmak ýcin
 
             app.UseRouting();
 
