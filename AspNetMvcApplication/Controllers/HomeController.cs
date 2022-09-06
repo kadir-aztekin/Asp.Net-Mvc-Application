@@ -8,13 +8,6 @@ namespace AspNetMvcApplication.Controllers
         {
             return View();
         }
-        public IActionResult Sayfa1()
-        {
-            return View();
-        }
-        public IActionResult Sayfa2()
-        {
-            return View();
-        }
+        
     }
 }
