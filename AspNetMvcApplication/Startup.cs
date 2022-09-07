@@ -1,3 +1,4 @@
+using AspNetMvcApplication.Extensions;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,6 +25,7 @@ namespace AspNetMvcApplication
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseHello();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -31,14 +33,15 @@ namespace AspNetMvcApplication
             app.UseStaticFiles(); //wwwroot kullanmak ýcin
 
             app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}/{id?}");
-                //endpoints.MapControllerRoute("CustomRoute", "{controller=Home}/{action=Index}/{id?}/{a}/{b}/{id}");
-
+                //endpoints.MapControllerRoute("Default", "{controller=Product}/{action=Create}");
+                //endpoints.MapControllerRoute("default2", "anasayfa", new { controller = "home", action = "ýndex" });
+                //endpoints.MapControllerRoute("Default3", "Create", new { controller = "Product", action = "Create" });
                 endpoints.MapDefaultControllerRoute();
-                //endpoints.MapControllerRoute("Default","{contoller=Home}/{action=Index}/{id?}");
+
             });
         }
     }
